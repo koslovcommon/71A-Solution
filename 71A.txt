@@ -1,0 +1,25 @@
+#include <iostream>
+#include <string>
+#include <sstream>
+ using namespace std;
+int main()
+{
+  int numOfInputs;
+  std::cin >> numOfInputs;
+  stringstream finalOutput;
+  
+  for( int i=0; i < numOfInputs ; ++i ){
+      std::string myString;
+      std::cin >> myString;
+      if( myString.length() <= 10 ){
+          finalOutput << myString << '\n';
+          } 
+      else {
+          std::string subString = myString.substr(2, myString.length()-2);
+          finalOutput<< myString.at(0) << subString.length() << myString.back() << '\n';
+              
+            }
+      }
+  std::cout << finalOutput.str() << '\n';
+}
+
