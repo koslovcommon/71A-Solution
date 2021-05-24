@@ -1,0 +1,18 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main() {
+	double n, m, a;
+	scanf( "%lf %lf %lf", &n,&m,&a);
+	if ( n*m==a*a ) {
+		cout << 1;
+	}
+	else {
+	long long horizontalTiles = ceil(n/a), verticalTiles = ceil(m/a);
+	cout << horizontalTiles*verticalTiles ;
+	}
+
+
+	return 0;
+}
